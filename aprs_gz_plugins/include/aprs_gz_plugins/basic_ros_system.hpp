@@ -13,8 +13,8 @@ namespace aprs_gz_plugins
 {
   class BasicRosSystem:
     public gz::sim::System,
-    public gz::sim::ISystemConfigure,
-    public gz::sim::ISystemUpdate
+    public gz::sim::ISystemConfigure
+    // public gz::sim::ISystemUpdate
   {
     public: 
       void Configure(
@@ -23,9 +23,9 @@ namespace aprs_gz_plugins
         gz::sim::EntityComponentManager &_ecm,
         gz::sim::EventManager &_eventManager) override;
 
-      void Update(
-        const gz::sim::UpdateInfo &_info,
-        gz::sim::EntityComponentManager &_ecm) override;
+      // void Update(
+      //   const gz::sim::UpdateInfo &_info,
+      //   gz::sim::EntityComponentManager &_ecm) override;
 
     private:
       rclcpp::Node::SharedPtr ros_node_;

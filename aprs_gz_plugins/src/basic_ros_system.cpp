@@ -8,6 +8,7 @@ GZ_ADD_PLUGIN(
   aprs_gz_plugins::BasicRosSystem,
   gz::sim::System,
   aprs_gz_plugins::BasicRosSystem::ISystemConfigure
+  // aprs_gz_plugins::BasicRosSystem::ISystemUpdate
 )
 
 namespace aprs_gz_plugins 
@@ -44,12 +45,12 @@ void BasicRosSystem::Configure(
   std::cout << "Plugin loaded" << std::endl;
 }
 
-void BasicRosSystem::Update(
-  const gz::sim::UpdateInfo &_info,
-  gz::sim::EntityComponentManager &_ecm)
-{
-  //
-}
+// void BasicRosSystem::Update(
+//   const gz::sim::UpdateInfo &_info,
+//   gz::sim::EntityComponentManager &_ecm)
+// {
+//   //
+// }
 
 void BasicRosSystem::OnBoolMsg(const example_interfaces::msg::Bool::SharedPtr msg) const 
 {
